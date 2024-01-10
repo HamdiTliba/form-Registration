@@ -1,38 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration-style: none;
+  overflow: hidden;
+  font-family: sans-serif;
+}
 .App {
-  text-align: center;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 100vh;
+  margin: auto;
+}
+.subtitle {
+  font-size: 32px;
+  font-weight: 600;
+}
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  margin: 30px;
+  text-align: justify;
+  max-height: 50vh;
+  overflow-y: auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.registration {
+  width: 600px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+input {
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  outline: none;
+  font-size: large;
+}
+label {
+  color: rgb(199, 16, 16);
+}
+form {
+  width: 100%;
+  padding: 20px;
+}
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(126, 6, 126);
   color: white;
+  font-size: large;
+  font-weight: 700;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: rgb(169, 11, 169);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.alert {
+  background-color: rgb(180, 245, 180);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid green;
+  position: absolute;
+  top: 50px;
+  margin: auto;
+}
+.transbounce {
+  animation: transbounce 0.3s ease;
+}
+@keyframes transbounce {
+  0% {
+    top: 10px;
+    opacity: 0.1;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    top: 50px;
+    opacity: 1;
   }
 }
